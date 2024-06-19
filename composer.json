@@ -1,0 +1,21 @@
+{
+    "name": "codedwebltd/backups",
+    "description": "This PHP script is designed to create a comprehensive backup of a specified directory and a MySQL database. The script compresses the backup into a ZIP file and emails it to a specified recipient. ",
+    "type": "library",
+    "require": {
+        "vlucas/phpdotenv": "5.6.x-dev",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codedwebltd\\Backups\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "christopher okoye"
+        }
+    ],
+    "minimum-stability": "dev"
+}
