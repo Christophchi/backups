@@ -56,12 +56,7 @@ Enjoy automatic server backups without manual intervention. Set up a cronjob to 
    cd backup-script
    ```
 
-2. **Install dependencies:**
-   ```sh
-   composer install
-   ```
-
-3. **Set up environment variables:**
+2. **Set up environment variables:**
    Rename `.env.example` to `.env` and update the variables as needed.
 
 ## Usage
@@ -77,6 +72,10 @@ This command will create a backup of the specified directory and database, compr
 ### Setting Up a Cron Job
 
 To automate the backup process, you can set up a cron job to run the script at a desired interval. For example, to run the script every week, add the following line to your crontab:
+
+OR
+
+set the cronjob directly from your server.
 
 ```sh
 0 0 * * 0 php /path/to/your/backup_script.php
@@ -116,8 +115,10 @@ BACKUP_PREFIX="CodedwebDomainBackup"
 DIR_TO_BACKUP="ssl"
 BACKUP_PATH="backupdata"
 
+
+
 APP_ENV=local
-APP_KEY=base64:qKKsNDPrFiq+UOD9dk0KaR32exyOSrBmf70GPuuzBBA=
+APP_KEY=base64:qKKsNDPrFiq+UOD9dk0KaR32exyOSrBmf70GPuuzXXA=
 APP_DEBUG=true
 DEV_URL=https://codedwebltd.org
 LOG_LEVEL=debug
@@ -125,19 +126,21 @@ LOG_LEVEL=debug
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=codejypp_db
-DB_USERNAME=codejypp_user
-DB_PASSWORD=Iphone15promax
+DB_DATABASE=dbname
+DB_USERNAME=dbusername
+DB_PASSWORD=dbpassword
+
 
 MAIL_MAILER=smtp
 SMTP_AUTH=true
 MAIL_HOST=codedwebltd.org
 MAIL_PORT=587
-MAIL_USERNAME=support@codedwebltd.org
-MAIL_PASSWORD=Iphone15promax
+MAIL_USERNAME=support@mail.org
+MAIL_PASSWORD=123456
 MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS="support@codedwebltd.org"
+MAIL_FROM_ADDRESS="support@mail.org"
 MAIL_FROM_NAME="Codedwebltd Backup Service"
+
 MAIL_TO="dakingeorge58@gmail.com"
 MAIL_TO_NAME="Christopher"
 ```
@@ -153,5 +156,3 @@ MAIL_TO_NAME="Christopher"
 For support, please contact [support@codedwebltd.org](mailto:support@codedwebltd.org) or [okoyechibuike031@gmail.com](mailto:okoyechibuike031@gmail.com).
 
 ---
-
-This README provides an overview of the Codedwebltd Backup Script, including its installation, usage, and configuration through environment variables.
